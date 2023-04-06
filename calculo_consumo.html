@@ -1,0 +1,28 @@
+<h1>¿Alcohol o gasolina?</h1>
+
+<button onclick="myFunction('gasolina')">Gasolina</button>
+<button onclick="myFunction('alcohol')">Alcohol</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction(combustible){
+        let text = ""
+        let tipo = combustible
+        let tanque = 40;
+        let kmGasolina = 480;
+        let kmAlcohol = 300;
+        function eficiencia(km, tanque){
+            return(km / tanque)
+        };
+
+        if(tipo === "gasolina"){
+            text = "la eficiencia del combustible " + combustible + " es de " + eficiencia(kmGasolina, tanque) + " km por litro"
+            document.getElementById("demo").innerHTML = text
+        }
+        else{
+            text = ("la eficiencia del combustible " + combustible + " es de " + eficiencia(kmAlcohol, tanque) + " km por litro");
+            document.getElementById("demo").innerHTML = text
+        }
+    }
+</script>
